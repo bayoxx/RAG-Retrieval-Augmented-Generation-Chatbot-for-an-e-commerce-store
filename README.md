@@ -108,6 +108,10 @@ $$;
 
 
 <br>
+![](N8N_workflow.png)
+
+<br>
+
 
 ⚙️ Workflow Configuration (n8n)
 
