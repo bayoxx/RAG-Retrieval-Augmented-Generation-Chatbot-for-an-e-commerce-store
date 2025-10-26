@@ -1,4 +1,4 @@
-# Cypril Stores RAG (Retrieval Augmented Generation Chatbot) Chatbot - Anna Bot
+## Cypril Stores RAG (Retrieval Augmented Generation) Chatbot - Anna Bot
 
 **Cypril Stores RAG Chatbot (Anna)** is an AI-powered customer assistant designed to handle customer inquiries for **Cypril Stores** — a retail chain with branches in **Lagos** and **Abuja**, Nigeria.
 
