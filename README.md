@@ -1,7 +1,3 @@
-# RAG-Retrieval-Augmented-Generation-Chatbot-for-an-e-commerce-store
-Intelligent AI Customer Support Powered by n8n, Supabase, and Groq
-
-
 # Cypril Stores RAG (Retrieval Augmented Generation Chatbot) Chatbot - Anna Bot
 
 **Cypril Stores RAG Chatbot (Anna)** is an AI-powered customer assistant designed to handle customer inquiries for **Cypril Stores** — a retail chain with branches in **Lagos** and **Abuja**, Nigeria.
@@ -120,7 +116,7 @@ $$;
 
 🔹 1. Document Processing Segment
 
-Trigger: Google Drive → File Created
+Trigger: Google Drive → File Created/ Added
 
 Embedding Batch Size: 200
 
@@ -151,15 +147,15 @@ AI Agent Name: Anna (Cypril Stores Customer Support)
 
 🧠 System Prompt
 
-You are "Cypril Stores Customer Support," a helpful, polite, and professional AI assistant.
+<p>You are "Cypril Stores Customer Support," a helpful, polite, and professional AI assistant.
 Your primary role is to answer customer inquiries about Cypril Stores' locations, operating hours,
-pricing, policies, and services.
+pricing, policies, and services.</p>
 
 Core Rules:
 1. Use only information from the Supabase RAG data.
 2. Cypril Stores operates in Lagos and Abuja, Nigeria. Prices are in Naira (₦).
 3. If unsure, respond with: 
-   "I apologize, but I do not have that specific information in my current records.
+   "I apologise, but I do not have that specific information in my current records.
     Please contact customer service at support@cyprilstores.ng for assistance."
 4. Maintain a warm, professional tone at all times.
 
@@ -197,8 +193,7 @@ The model’s knowledge base is derived from Cypril Stores’ internal business 
 📞 Manager contacts and operational notes
 
 
-<p>💬 Example Chat Flow
-
+💬 Example Chat Flow
 
 User:
 
@@ -208,7 +203,7 @@ Anna:
 
 The Wuse (Abuja) branch operates daily from 8:00 AM to 8:00 PM.
 You can reach the store at 080-CYPRIL-A.
-</p>
+
 
 🧠 Memory Example
 
@@ -220,7 +215,7 @@ Anna retains the last 10 exchanges per user session using n8n_chat_histories sto
 
 🌍 Deployment
 
-Platform: n8n Cloud (Production)
+Platform: n8n Cloud
 
 Access: Chatbot accessible via a custom chat URL
 
@@ -236,11 +231,12 @@ My name is Anna. Welcome to Cypril Stores. How can I assist you today?
 📸 Visuals
 🧠 Workflow Snapshot
 
-💬 Chatbot Demo
-
 ![N8N Workflow](chat_interface_two.png)
 
 <br>
+
+💬 Chatbot Demo
+
 🎥 Watch Full Demo (Video)
 
 ▶️ [Watch Demo Video](https://drive.google.com/file/d/10tVfV7U84uPMFgEjf2QDb03o13hIOUoh/view)
@@ -272,9 +268,9 @@ Groq AI Models
 
 👩🏽‍💻 Author
 
-Bayo Yusuff
-Data & Automation Analyst | AI Workflow Developer
-📧 support@cyprilstores.ng
+Bayonle Yusuff
 
-🌐 GitHub Portfolio
+Data & Automation Analyst | AI Workflow Developer
+
+
 
