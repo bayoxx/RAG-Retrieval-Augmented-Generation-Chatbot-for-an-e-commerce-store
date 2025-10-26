@@ -240,6 +240,10 @@ My name is Anna. Welcome to Cypril Stores. How can I assist you today?
 <br>
 🎥 Watch Full Demo (Video)
 
+▶️ [Watch Demo Video on Google Drive](https://drive.google.com/file/d/10tVfV7U84uPMFgEjf2QDb03o13hIOUoh/view)
+
+
+
 <br>
 <br>
 
