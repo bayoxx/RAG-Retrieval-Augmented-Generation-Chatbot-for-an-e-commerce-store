@@ -100,9 +100,10 @@ BEGIN
   LIMIT match_count;
 END;
 $$;
-
-</details>
 ```
+</details>
+
+
 
 
 ⚙️ Workflow Configuration (n8n)
