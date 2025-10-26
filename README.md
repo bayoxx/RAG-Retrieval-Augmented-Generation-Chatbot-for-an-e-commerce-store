@@ -106,7 +106,11 @@ $$;
 
 
 
+
+<br>
+
 ⚙️ Workflow Configuration (n8n)
+
 🔹 1. Document Processing Segment
 
 Trigger: Google Drive → File Created
@@ -119,6 +123,11 @@ Text Splitter: Chunk Size = 1000, Overlap = 200
 
 Destination: Supabase Vector Store → documents table
 
+<br>
+<br><br>
+
+
+
 🔹 2. Chatbot Reasoning Segment
 
 Model: Groq Chat Model
@@ -128,6 +137,10 @@ Memory: Postgres Chat Memory (n8n_chat_histories)
 Context Window Length: 10
 
 AI Agent Name: Anna (Cypril Stores Customer Support)
+
+
+<br>
+<br>
 
 🧠 System Prompt
 
@@ -144,6 +157,9 @@ Core Rules:
 4. Maintain a warm, professional tone at all times.
 
 
+<br>
+<br>
+
 🔹 3. Vector Retrieval Segment
 
 Node: “Answer Questions with a Vector Store”
@@ -156,7 +172,7 @@ Vector Source: Supabase Vector Store → documents table
 
 Connected Model: Groq Chat Model
 
-🧾 Business Knowledge Base
+#### 🧾 Business Knowledge Base
 
 The model’s knowledge base is derived from Cypril Stores’ internal business document, covering:
 
@@ -170,7 +186,8 @@ The model’s knowledge base is derived from Cypril Stores’ internal business 
 
 📞 Manager contacts and operational notes
 
-💬 Example Chat Flow
+
+<p>💬 Example Chat Flow
 
 User:
 
@@ -180,10 +197,13 @@ Anna:
 
 The Wuse (Abuja) branch operates daily from 8:00 AM to 8:00 PM.
 You can reach the store at 080-CYPRIL-A.
+</p>
 
 🧠 Memory Example
 
 Anna retains the last 10 exchanges per user session using n8n_chat_histories stored in Supabase PostgreSQL, ensuring context-aware and seamless interactions.
+
+
 
 🌍 Deployment
 
@@ -197,10 +217,12 @@ Hi there! 👋
 My name is Anna. Welcome to Cypril Stores. How can I assist you today?
 
 
+
 📸 Visuals
 🧠 Workflow Snapshot
 
 💬 Chatbot Demo
+
 
 🎥 Watch Full Demo (Video)
 
