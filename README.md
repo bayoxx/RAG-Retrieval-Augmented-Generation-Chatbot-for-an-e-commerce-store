@@ -6,7 +6,7 @@ The chatbot leverages a **Retrieval-Augmented Generation (RAG)** pipeline built 
 
 ---
 
-![Workflow Demo](Demo_chat_git.gif)  
+![Workflow Demo](demo_rag_bot.gif)  
 
 
 ## 🚀 Key Features
