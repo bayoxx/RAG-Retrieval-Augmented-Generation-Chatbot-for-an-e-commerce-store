@@ -204,6 +204,8 @@ You can reach the store at 080-CYPRIL-A.
 Anna retains the last 10 exchanges per user session using n8n_chat_histories stored in Supabase PostgreSQL, ensuring context-aware and seamless interactions.
 
 
+<br>
+<br>
 
 🌍 Deployment
 
@@ -217,14 +219,18 @@ Hi there! 👋
 My name is Anna. Welcome to Cypril Stores. How can I assist you today?
 
 
-
+<br>
+<br>
 📸 Visuals
 🧠 Workflow Snapshot
 
 💬 Chatbot Demo
 
-
+<br>
 🎥 Watch Full Demo (Video)
+
+<br>
+<br>
 
 🧩 Future Improvements
 
