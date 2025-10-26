@@ -101,7 +101,7 @@ END;
 $$;
 
 
-</details>
+
 
 
 ⚙️ Workflow Configuration (n8n)
