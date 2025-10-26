@@ -55,6 +55,8 @@ graph TD
 
 
 
+
+
 🧮 Supabase Setup
 <details> <summary>📜 Click to view SQL setup script</summary>
 
@@ -97,6 +99,7 @@ BEGIN
   LIMIT match_count;
 END;
 $$;
+
 
 </details>
 
