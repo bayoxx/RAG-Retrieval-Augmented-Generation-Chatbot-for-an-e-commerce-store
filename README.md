@@ -60,6 +60,7 @@ graph TD
 🧮 Supabase Setup
 <details> <summary>📜 Click to view SQL setup script</summary>
 
+```sql
 -- Enable pgvector extension
 CREATE EXTENSION vector;
 
@@ -100,8 +101,8 @@ BEGIN
 END;
 $$;
 
-
-
+</details>
+```
 
 
 ⚙️ Workflow Configuration (n8n)
