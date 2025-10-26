@@ -2,29 +2,29 @@
 Intelligent AI Customer Support Powered by n8n, Supabase, and Groq
 
 
-🧠 Project Overview
+# 🧠 Cypril Stores RAG Chatbot (Anna)
 
-Cypril Stores RAG Chatbot (Anna) is an AI-powered assistant designed to answer customer inquiries about Cypril Stores — a retail chain operating in Lagos and Abuja, Nigeria.
+**Cypril Stores RAG Chatbot (Anna)** is an AI-powered customer assistant designed to handle customer inquiries for **Cypril Stores** — a retail chain with branches in **Lagos** and **Abuja**, Nigeria.
 
-This chatbot leverages a Retrieval-Augmented Generation (RAG) pipeline built using n8n, Supabase, Cohere, and Groq to provide accurate, context-aware responses sourced directly from Cypril Stores’ business documentation.
+The chatbot leverages a **Retrieval-Augmented Generation (RAG)** pipeline built using **n8n**, **Supabase**, **Cohere**, and **Groq** to deliver accurate, context-aware responses sourced directly from verified Cypril Stores business documentation.
 
-🚀 Key Features
+---
 
-💬 Conversational AI: Built with the Groq Chat Model for natural, fast reasoning.
+## 🚀 Key Features
 
-🧾 Knowledge-grounded responses: Uses Supabase Vector Store for document retrieval and context injection.
+- 💬 **Conversational AI:** Built with the **Groq Chat Model** for fast and natural reasoning.  
+- 🧾 **Knowledge-Grounded Responses:** Retrieves data from **Supabase Vector Store** for accurate answers.  
+- 🧩 **Vector Embeddings:** Uses **Cohere Embed-English-v3.0 (1024 Dimensions)** for semantic understanding.  
+- 🧠 **Postgres Chat Memory:** Persists user conversations in **Supabase** (`n8n_chat_histories` table).  
+- ⚡ **Automated Knowledge Updates:** Automatically retrains the knowledge base when a new business document is uploaded to Google Drive.  
+- 🔒 **RAG Integrity:** Responses strictly limited to verified store data — eliminating hallucinations.  
+- 🌐 **Production Deployment:** End users interact via a public chat interface powered by **n8n**.
 
-🧩 Vector Embeddings: Uses Cohere’s Embed-English-v3.0 (1024 Dimensions) for semantic understanding.
+---
 
-📚 Postgres Chat Memory: Tracks user conversations persistently with Supabase’s PostgreSQL table n8n_chat_histories.
+## 🧩 Architecture Overview
 
-⚡ Automated Document Ingestion: Automatically retrains the knowledge base whenever a new business document is uploaded to Google Drive.
-
-🔒 RAG Integrity: Responses are restricted to verified data in the Supabase vector store — no hallucinations.
-
-🌐 Deployed via n8n Production Environment: End users can chat directly with Anna, Cypril Stores’ virtual assistant.
-
-🧩 Architecture Overview
+```mermaid
 graph TD
     A[Google Drive Trigger] --> B[Download File]
     B --> C[Default Data Loader]
@@ -40,19 +40,23 @@ graph TD
     K --> L[Groq Chat Model]
     L --> F
     end
+```
 
-🧰 Tools & Technologies
-Tool	Purpose
-n8n	Automation & workflow orchestration
-Supabase	Database + vector storage for RAG
-Cohere Embed-English-v3.0 (1024D)	Text embeddings
-Groq Chat Model	Fast LLM inference for reasoning
-PostgreSQL	Memory storage (chat histories)
-Google Drive	Document upload trigger
-pgvector	Vector similarity search in SQL
+
+| Tool                                  | Purpose                             |
+| ------------------------------------- | ----------------------------------- |
+| **n8n**                               | Automation & workflow orchestration |
+| **Supabase**                          | Database + vector storage for RAG   |
+| **Cohere Embed-English-v3.0 (1024D)** | Text embeddings                     |
+| **Groq Chat Model**                   | Fast LLM inference for reasoning    |
+| **PostgreSQL**                        | Memory storage (chat histories)     |
+| **Google Drive**                      | Document upload trigger             |
+| **pgvector**                          | Vector similarity search in SQL     |
+
+
+
 🧮 Supabase Setup
-
-Run the following SQL commands to configure the vector store for embeddings:
+<details> <summary>📜 Click to view SQL setup script</summary>
 
 -- Enable pgvector extension
 CREATE EXTENSION vector;
@@ -94,6 +98,9 @@ BEGIN
 END;
 $$;
 
+</details>
+
+
 ⚙️ Workflow Configuration (n8n)
 🔹 1. Document Processing Segment
 
@@ -117,7 +124,7 @@ Context Window Length: 10
 
 AI Agent Name: Anna (Cypril Stores Customer Support)
 
-Prompt:
+🧠 System Prompt
 
 You are "Cypril Stores Customer Support," a helpful, polite, and professional AI assistant.
 Your primary role is to answer customer inquiries about Cypril Stores' locations, operating hours,
@@ -131,31 +138,32 @@ Core Rules:
     Please contact customer service at support@cyprilstores.ng for assistance."
 4. Maintain a warm, professional tone at all times.
 
+
 🔹 3. Vector Retrieval Segment
 
-Node: “Answer questions with a vector store”
+Node: “Answer Questions with a Vector Store”
 
-Description: "Detailed information regarding Cypril Stores' locations (Lagos and Abuja), business hours, product pricing in Naira (₦), delivery policy, return policy, and loyalty program details."
+Description: "Detailed information regarding Cypril Stores’ locations (Lagos and Abuja), business hours, product pricing, delivery policy, return policy, and loyalty program details."
 
 Limit: 15
 
-Vector Source: Supabase Vector Store → Table: documents
+Vector Source: Supabase Vector Store → documents table
 
 Connected Model: Groq Chat Model
 
 🧾 Business Knowledge Base
 
-The AI model was trained using the Cypril Stores Business Document, which includes:
+The model’s knowledge base is derived from Cypril Stores’ internal business document, covering:
 
-Store locations, hours, and contacts (Lagos & Abuja)
+🏬 Store locations, hours, and contacts (Lagos & Abuja)
 
-Product categories, unit prices, and discounts
+🛒 Product categories, unit prices, and special offers
 
-Delivery, return, and refund policies
+🚚 Delivery, return, and refund policies
 
-Loyalty program (Cypril Rewards Club)
+🎁 Loyalty program: Cypril Rewards Club
 
-Internal operational notes (manager contacts, peak hours)
+📞 Manager contacts and operational notes
 
 💬 Example Chat Flow
 
@@ -170,30 +178,36 @@ You can reach the store at 080-CYPRIL-A.
 
 🧠 Memory Example
 
-The chatbot stores recent interactions (last 10 exchanges) in the n8n_chat_histories table using Supabase PostgreSQL, enabling contextual continuity within a session.
+Anna retains the last 10 exchanges per user session using n8n_chat_histories stored in Supabase PostgreSQL, ensuring context-aware and seamless interactions.
 
 🌍 Deployment
 
 Platform: n8n Cloud (Production)
 
-Access: Chatbot accessible via custom chat URL.
+Access: Chatbot accessible via a custom chat URL
 
 First Message:
 
 Hi there! 👋
 My name is Anna. Welcome to Cypril Stores. How can I assist you today?
 
-📸 Workflow Snapshot
+
+📸 Visuals
+🧠 Workflow Snapshot
+
+💬 Chatbot Demo
+
+🎥 Watch Full Demo (Video)
 
 🧩 Future Improvements
 
-Integrate live inventory data via Cypril’s internal API
+🔗 Integrate live inventory data via Cypril’s internal API
 
-Add sentiment analysis node for customer feedback
+💬 Add sentiment analysis for customer feedback
 
-Enable multilingual support (English + Yoruba)
+🌐 Enable multilingual support (English + Yoruba)
 
-Deploy to WhatsApp or website widget via n8n Webhook
+📱 Deploy to WhatsApp or web chat widget using n8n Webhook
 
 📚 References
 
@@ -212,3 +226,4 @@ Data & Automation Analyst | AI Workflow Developer
 📧 support@cyprilstores.ng
 
 🌐 GitHub Portfolio
+
