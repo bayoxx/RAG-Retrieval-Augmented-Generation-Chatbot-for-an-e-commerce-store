@@ -152,6 +152,7 @@ Your primary role is to answer customer inquiries about Cypril Stores' locations
 pricing, policies, and services.*
 
 *Core Rules:*
+
 *1. Use only information from the Supabase RAG data.*
 
 *2. Cypril Stores operates in Lagos and Abuja, Nigeria. Prices are in Naira (₦).*
@@ -197,6 +198,7 @@ The model’s knowledge base is derived from Cypril Stores’ internal business 
 
 📞 Manager contacts and operational notes
 
+<br>
 
 💬 Example Chat Flow
 
@@ -209,7 +211,7 @@ Anna:
 The Wuse (Abuja) branch operates daily from 8:00 AM to 8:00 PM.
 You can reach the store at 080-CYPRIL-A.
 
-
+<br>
 🧠 Memory Example
 
 Anna retains the last 10 exchanges per user session using n8n_chat_histories stored in Supabase PostgreSQL, ensuring context-aware and seamless interactions.
@@ -251,31 +253,25 @@ My name is Anna. Welcome to Cypril Stores. How can I assist you today?
 <br>
 <br>
 
-🧩 Future Improvements
+**🧩 Future Improvements**
 
-🔗 Integrate live inventory data via Cypril’s internal API
+- 🔗 Integrate live inventory data via Cypril’s internal API
 
-💬 Add sentiment analysis for customer feedback
+- 💬 Add sentiment analysis for customer feedback
 
-🌐 Enable multilingual support (English + Yoruba)
+- 🌐 Enable multilingual support (English + Yoruba)
 
-📱 Deploy to WhatsApp or web chat widget using n8n Webhook
+- 📱 Deploy to WhatsApp or web chat widget using n8n Webhook
 
-📚 References
+<br>
+<br>
 
-n8n Documentation
-
-Supabase Vector Database
-
-Cohere Embeddings API
-
-Groq AI Models
 
 👩🏽‍💻 Author
 
-Bayonle Yusuff
+**Bayonle Yusuff**
 
-Data & Automation Analyst | AI Workflow Developer
+AI Automation Engineer | Data Analyst | AI Workflow Developer 
 
 
 
