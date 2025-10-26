@@ -26,18 +26,18 @@ The chatbot leverages a **Retrieval-Augmented Generation (RAG)** pipeline built 
 
 ```mermaid
 graph TD
-    A[Google Drive Trigger] --> B[Download File]
-    B --> C[Default Data Loader]
-    C --> D[Recursive Character Text Splitter]
-    D --> E[Cohere Embeddings (Embed-English-v3.0)]
-    E --> F[Supabase Vector Store]
-    F -->|Store Embeddings| G[(Supabase Database)]
+    A["Google Drive Trigger"] --> B["Download File"]
+    B --> C["Default Data Loader"]
+    C --> D["Recursive Character Text Splitter"]
+    D --> E["Cohere Embeddings (Embed-English-v3.0)"]
+    E --> F["Supabase Vector Store"]
+    F -->|Store Embeddings| G["(Supabase Database)"]
     
     subgraph Chat Pipeline
-    H[User Chat Message] --> I[AI Agent: Cypril Support (Anna)]
-    I --> J[Postgres Chat Memory (Supabase)]
-    I --> K[Answer with Vector Store]
-    K --> L[Groq Chat Model]
+    H["User Chat Message"] --> I["AI Agent: Cypril Support (Anna)"]
+    I --> J["Postgres Chat Memory (Supabase)"]
+    I --> K["Answer with Vector Store"]
+    K --> L["Groq Chat Model"]
     L --> F
     end
 ```
