@@ -2,13 +2,16 @@
 Intelligent AI Customer Support Powered by n8n, Supabase, and Groq
 
 
-# 🧠 Cypril Stores RAG Chatbot (Anna)
+# Cypril Stores RAG (Retrieval Augmented Generation Chatbot) Chatbot - Anna Bot
 
 **Cypril Stores RAG Chatbot (Anna)** is an AI-powered customer assistant designed to handle customer inquiries for **Cypril Stores** — a retail chain with branches in **Lagos** and **Abuja**, Nigeria.
 
 The chatbot leverages a **Retrieval-Augmented Generation (RAG)** pipeline built using **n8n**, **Supabase**, **Cohere**, and **Groq** to deliver accurate, context-aware responses sourced directly from verified Cypril Stores business documentation.
 
 ---
+
+![Workflow Demo](Demo_chat_git.gif)  
+
 
 ## 🚀 Key Features
 
@@ -240,7 +243,7 @@ My name is Anna. Welcome to Cypril Stores. How can I assist you today?
 <br>
 🎥 Watch Full Demo (Video)
 
-▶️ [Watch Demo Video on Google Drive](https://drive.google.com/file/d/10tVfV7U84uPMFgEjf2QDb03o13hIOUoh/view)
+▶️ [Watch Demo Video](https://drive.google.com/file/d/10tVfV7U84uPMFgEjf2QDb03o13hIOUoh/view)
 
 
 
