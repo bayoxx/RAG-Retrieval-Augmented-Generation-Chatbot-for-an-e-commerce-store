@@ -107,11 +107,11 @@ $$;
 
 
 
-<br>
-![](N8N_workflow.png)
+![N8N Workflow](N8N_workflow.png)
+
+
 
 <br>
-
 
 ⚙️ Workflow Configuration (n8n)
 
@@ -161,6 +161,7 @@ Core Rules:
 4. Maintain a warm, professional tone at all times.
 
 
+
 <br>
 <br>
 
@@ -175,6 +176,8 @@ Limit: 15
 Vector Source: Supabase Vector Store → documents table
 
 Connected Model: Groq Chat Model
+
+<br>
 
 #### 🧾 Business Knowledge Base
 
@@ -192,6 +195,7 @@ The model’s knowledge base is derived from Cypril Stores’ internal business 
 
 
 <p>💬 Example Chat Flow
+
 
 User:
 
@@ -222,6 +226,7 @@ First Message:
 Hi there! 👋
 My name is Anna. Welcome to Cypril Stores. How can I assist you today?
 
+![N8N Workflow](chat_interface_one.png)
 
 <br>
 <br>
@@ -229,6 +234,8 @@ My name is Anna. Welcome to Cypril Stores. How can I assist you today?
 🧠 Workflow Snapshot
 
 💬 Chatbot Demo
+
+![N8N Workflow](chat_interface_two.png)
 
 <br>
 🎥 Watch Full Demo (Video)
