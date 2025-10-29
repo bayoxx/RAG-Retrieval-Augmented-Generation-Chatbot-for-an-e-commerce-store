@@ -259,7 +259,7 @@ My name is Anna. Welcome to Cypril Stores. How can I assist you today?
 
 - 💬 Add sentiment analysis for customer feedback
 
-- 🌐 Enable multilingual support (English + Yoruba)
+- 🌐 Enable multilingual support 
 
 - 📱 Deploy to WhatsApp or web chat widget using n8n Webhook
 
